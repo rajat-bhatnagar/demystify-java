@@ -31,5 +31,7 @@ public class EmployeesDefaultSortCustomSort {
         treeSet2.add(emp6);
         System.out.println("Employee list in custom order aka using Comparator(I) :: "+treeSet2);
 
+        System.out.println("Modified");
+
     }
 }
