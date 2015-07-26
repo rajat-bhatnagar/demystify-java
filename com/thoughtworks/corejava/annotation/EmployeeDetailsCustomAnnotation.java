@@ -10,11 +10,16 @@ import java.lang.annotation.*;
 @Documented
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
+/*
+ * We are putting default values to members of Custom Annotation
+ * If no Values are passed for our Custom Annotation while applying it to a class
+ * the default values would be picked up
+ */
 public @interface EmployeeDetailsCustomAnnotation {
-    public String employeeName();
+    String employeeName() default "EMPTY_EMP_NAME";
 
-    public String employeeLocation();
+    String employeeLocation() default "USA";
 
-    public int employeeSalary();
+    int employeeSalary() default 100000;
 
 }
