@@ -15,7 +15,7 @@ import java.lang.annotation.*;
  * If no Values are passed for our Custom Annotation while applying it to a class
  * the default values would be picked up
  */
-public @interface EmployeeDetailsCustomAnnotation {
+public @interface EmployeeDetailsCustomClassLevelAnnotation {
     String employeeName() default "EMPTY_EMP_NAME";
 
     String employeeLocation() default "USA";

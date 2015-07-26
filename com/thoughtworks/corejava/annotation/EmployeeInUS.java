@@ -2,12 +2,12 @@ package com.thoughtworks.corejava.annotation;
 
 /**
  * Created by rajatbhatnagar on 7/26/15.
- * This class is a placeholder so that we can apply our custom annotation EmployeeDetailsCustomAnnotation
+ * This class is a placeholder so that we can apply our custom annotation EmployeeDetailsCustomClassLevelAnnotation
  * and fetch the details in the implementation class for EmployeeInUS later
  */
 
 //Applying custom annotation to class
-@EmployeeDetailsCustomAnnotation(employeeName = "Mike", employeeLocation = "Hartford", employeeSalary = 90000)
+@EmployeeDetailsCustomClassLevelAnnotation(employeeName = "Mike", employeeLocation = "Hartford", employeeSalary = 90000)
 public class EmployeeInUS {
     private String empName;
     private String empLOC;

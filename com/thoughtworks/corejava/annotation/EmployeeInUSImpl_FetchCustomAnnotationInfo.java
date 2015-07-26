@@ -5,7 +5,7 @@ import java.lang.annotation.Annotation;
 /**
  * Created by rajatbhatnagar on 7/26/15.
  * This class demonstrates how we can fetch the custom annotation values
- * The custom annotation @EmployeeDetailsCustomAnnotation has already been applied to EmployeeInUS
+ * The custom annotation @EmployeeDetailsCustomClassLevelAnnotation has already been applied to EmployeeInUS
  */
 public class EmployeeInUSImpl_FetchCustomAnnotationInfo {
     public static void main(String[] args) {
@@ -22,9 +22,9 @@ public class EmployeeInUSImpl_FetchCustomAnnotationInfo {
         //Fetch class to which custom annotation is applied
         Class classObj = employeeInUS.getClass();
         //Create Annotation obj
-        Annotation annotation = classObj.getAnnotation(EmployeeDetailsCustomAnnotation.class);
-        //Typecast to EmployeeDetailsCustomAnnotation
-        EmployeeDetailsCustomAnnotation myCustomAnnotationDetails = (EmployeeDetailsCustomAnnotation) annotation;
+        Annotation annotation = classObj.getAnnotation(EmployeeDetailsCustomClassLevelAnnotation.class);
+        //Typecast to EmployeeDetailsCustomClassLevelAnnotation
+        EmployeeDetailsCustomClassLevelAnnotation myCustomAnnotationDetails = (EmployeeDetailsCustomClassLevelAnnotation) annotation;
         //Print the details of Custom Annotation
         System.out.println("MyCustomAnnotationDetails are :: ");
         System.out.println("myCustomAnnotationDetails NAME :: " + myCustomAnnotationDetails.employeeName());
