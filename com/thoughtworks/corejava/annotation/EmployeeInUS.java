@@ -12,11 +12,13 @@ public class EmployeeInUS {
     private String empName;
     private String empLOC;
     private int empSal;
+    private String empProgrammingSkill;
 
-    public EmployeeInUS(String empName, String empLOC, int empSal) {
+    public EmployeeInUS(String empName, String empLOC, int empSal, String empProgrammingSkill) {
         this.empName = empName;
         this.empLOC = empLOC;
         this.empSal = empSal;
+        this.empProgrammingSkill = empProgrammingSkill;
     }
 
     public void setEmpName(String empName) {
@@ -41,6 +43,16 @@ public class EmployeeInUS {
 
     public int getEmpSal() {
         return empSal;
+    }
+
+    public void setEmpProgrammingSkill(String empProgrammingSkill) {
+        this.empProgrammingSkill = empProgrammingSkill;
+    }
+
+    @EmployeeDetailsCustomMethodLevelAnnotation
+    public String getEmpProgrammingSkill() {
+
+        return empProgrammingSkill;
     }
 
 }
