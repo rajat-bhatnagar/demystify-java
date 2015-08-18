@@ -18,5 +18,9 @@ public class Singleton {
         return LazyHolder.INSTANCE;
     }
 
+    public void printSingleton() {
+        System.out.println("Inside print singleton");
+    }
+
 
 }
