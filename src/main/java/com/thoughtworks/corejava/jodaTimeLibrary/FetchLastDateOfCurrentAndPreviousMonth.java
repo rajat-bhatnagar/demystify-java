@@ -10,11 +10,14 @@ import java.util.Date;
 /**
  * Created by rajatbhatnagar on 9/27/15.
  */
-public class SimpleDate {
+public class FetchLastDateOfCurrentAndPreviousMonth {
+    public FetchLastDateOfCurrentAndPreviousMonth() {
+    }
     /*
      * This program fetches the last day of the previous month and
      * the last date of the current month based on the input date
      */
+
     public static void main(String[] args) throws Exception {
 
 
@@ -30,9 +33,15 @@ public class SimpleDate {
 
         String lastDteOfCurrentMonth = getLastDayOfCurrentMonth(dt.getMonthOfYear(), dt.getYear());
         System.out.println(" lastDteOfCurrentMonth : " + lastDteOfCurrentMonth);
+        //Create java date object using last date of current month
+        Date benefitExpirationDate = sdf.parse(lastDteOfCurrentMonth);
+        System.out.println("benefitExpirationDate = " + benefitExpirationDate);
 
         String lastDteOfPreviousMonth = getLastDayOfPreviousMonth(dt.getMonthOfYear(), dt.getYear());
         System.out.println("lastDteOfPreviousMonth :: " + lastDteOfPreviousMonth);
+        // //Create java date object using last date of previous month
+        Date benefitExpirationDateOne = sdf.parse(lastDteOfPreviousMonth);
+        System.out.println("benefitExpirationDateOne = " + benefitExpirationDateOne);
 
     }
 
