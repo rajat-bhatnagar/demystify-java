@@ -18,5 +18,6 @@ public class gsonSetDateFormat {
         Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
         String result = gson.toJson(product);
         System.out.println("result = " + result);
+
     }
 }
