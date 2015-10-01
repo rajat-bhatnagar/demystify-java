@@ -5,6 +5,7 @@ import org.joda.time.LocalDate;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -27,8 +28,7 @@ public class FetchLastDateOfCurrentAndPreviousMonth {
         Date fileReceiptDate = sdf.parse(dateString);
         System.out.println("fileReceiptDate :: " + fileReceiptDate);
 
-        //Create a JODA datetime obj
-
+        //Create a JODA datetime object
         DateTime dt = new DateTime(fileReceiptDate);
 
         String lastDteOfCurrentMonth = getLastDayOfCurrentMonth(dt.getMonthOfYear(), dt.getYear());
