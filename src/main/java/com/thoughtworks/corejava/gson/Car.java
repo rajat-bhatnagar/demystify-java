@@ -1,9 +1,12 @@
 package com.thoughtworks.corejava.gson;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by rajatbhatnagar on 9/30/15.
  */
 public class Car {
+    @SerializedName("Company")
     private String manufacturer;
     private String model;
     private Double capacity;
