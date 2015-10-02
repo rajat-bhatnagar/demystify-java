@@ -18,7 +18,10 @@ public class FreeMusicArchive {
         datasets.add(dataset);
         List<String> errors = new ArrayList<String>();
         Albums albums = new Albums("Free Music Archive - Albums", "", errors, "13039", 2608, 1, "5", datasets);
-        Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setPrettyPrinting();
+        gsonBuilder.serializeNulls();
+        Gson gson = gsonBuilder.create();
         String JSON = gson.toJson(albums);
         System.out.println("JSON = " + JSON);
     }
