@@ -24,8 +24,13 @@ public class ParseJSONTree {
             JsonParser parser = new JsonParser();
             //Construct a JSON element
             JsonElement element = parser.parse(inputJSON);
+            // The JsonElement is the root node. It can be an object, array, null or
+            // java primitive.
             if (element.isJsonObject()) {
                 JsonObject albums = element.getAsJsonObject();
+                // use the isxxx methods to find out the type of jsonelement. In our
+                // example we know that the root object is the Albums object and
+                // contains an array of dataset objects
                 System.out.println(albums.get("title").getAsString());
                 JsonArray datasets = albums.getAsJsonArray("dataset");
                 for (int counter = 0; counter < datasets.size(); counter++) {
