@@ -5,3 +5,4 @@ target/
 .idea/copyright/
 .idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml
 .idea/scopes/
+ .idea/
