@@ -4,7 +4,7 @@ import org.apache.commons.collections.buffer.CircularFifoBuffer;
 /**
  * Created by rajatbhatnagar on 12/28/15.
  */
-public class CircularBuffer {
+public class CircularFifoBufferDemo {
     //Circular buffer is a linear data structure which follows the FIFO principle
     public static void main(String[] args) {
         CircularFifoBuffer buf = new CircularFifoBuffer(4);
