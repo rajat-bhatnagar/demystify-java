@@ -33,6 +33,10 @@ public class PersonArrayList {
         }
         //Write a custom Age Comparator to sort based on the Age and then use the Collections.sort method to sort
         Collections.sort(persons,new AgeComparator());
-        System.out.println("Sorted Persons Based on Age :: "+persons);
+        System.out.println("\nSorted Persons Based on Ascending Age :: "+persons);
+
+        //A Custom comparator which returns Age in reverse order
+        Collections.sort(persons , new ReverseComparator<Person>(new AgeComparator()));
+        System.out.println("\nSorted Persons Based on Descending Age :: "+persons);
     }
 }
