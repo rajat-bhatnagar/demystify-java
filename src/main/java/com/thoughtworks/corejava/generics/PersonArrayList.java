@@ -3,6 +3,7 @@ package com.thoughtworks.corejava.generics;
 import com.thoughtworks.corejava.arrays.Person;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public class PersonArrayList {
     public static void main(String[] args) {
-        Person Swenson = new Person(40,"Mike");
+        Person Swenson = new Person(47,"Mike");
         Person Gagan = new Person(45,"Gagan");
         Person Bunny = new Person(40,"Bunny");
         List<Person> persons = new ArrayList<Person>();
@@ -30,5 +31,8 @@ public class PersonArrayList {
         for(Person person : persons){
             System.out.println("person = " + person);
         }
+        //Write a custom Age Comparator to sort based on the Age and then use the Collections.sort method to sort
+        Collections.sort(persons,new AgeComparator());
+        System.out.println("Sorted Persons Based on Age :: "+persons);
     }
 }
