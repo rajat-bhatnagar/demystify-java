@@ -6,7 +6,7 @@ import java.util.Collection;
 public class FindMaxElementCollGenericMethod {
 
     //A generic method to find the maximum element out of a collection
-    public static <T extends Comparable<T>> T max(Collection<T> collection){
+    public static <T extends Comparable<? super T>> T max(Collection<? extends T> collection){
         T candidate = collection.iterator().next();
         for(T element : collection){
             if(candidate.compareTo(element)<0){
