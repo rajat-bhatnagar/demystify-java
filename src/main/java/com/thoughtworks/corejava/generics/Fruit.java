@@ -3,7 +3,7 @@ package com.thoughtworks.corejava.generics;
 /**
  * Created by rajatbhatnagar on 1/24/16.
  */
-public abstract class Fruit implements Comparable<Fruit> {
+public abstract class Fruit {
     protected String name;
     protected int size;
 

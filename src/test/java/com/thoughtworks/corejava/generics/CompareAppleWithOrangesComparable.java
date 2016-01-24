@@ -22,6 +22,7 @@ public class CompareAppleWithOrangesComparable {
         List<Fruit> mixed = Arrays.<Fruit>asList(apple1,orange2,apple2);
         assert Collections.max(apples).equals(apple2);
         assert Collections.max(oranges).equals(orange2);
-        assert Collections.max(mixed).equals(orange2);
+        //Comparison of oranges with apples is prohibited
+        //assert Collections.max(mixed).equals(orange2); //compile time error as Apple and Orange are strongly typed
     }
 }
