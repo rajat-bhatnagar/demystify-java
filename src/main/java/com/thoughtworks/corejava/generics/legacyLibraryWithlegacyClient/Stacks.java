@@ -1,4 +1,4 @@
-package com.thoughtworks.corejava.generics.genericLibraryWithGenericClient;
+package com.thoughtworks.corejava.generics.legacyLibraryWithlegacyClient;
 
 
 /**
