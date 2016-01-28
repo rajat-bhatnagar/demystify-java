@@ -1,4 +1,4 @@
-package com.thoughtworks.corejava.temp;
+package com.thoughtworks.corejava.generics.genericLibraryWthGenericClient;
 
 /**
  * Created by rajatbhatnagar on 1/25/16.
