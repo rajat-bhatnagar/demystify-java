@@ -1,4 +1,4 @@
-package com.thoughtworks.corejava.generics.genericLibraryWthGenericClient;
+package com.thoughtworks.corejava.generics.genericLibraryWithGenericClient;
 
 import java.util.ArrayList;
 import java.util.List;
