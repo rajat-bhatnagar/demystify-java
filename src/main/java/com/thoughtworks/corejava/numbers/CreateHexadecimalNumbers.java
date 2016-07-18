@@ -1,5 +1,6 @@
 package com.thoughtworks.corejava.numbers;
 
+import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
 
 import java.nio.ByteBuffer;
@@ -19,18 +20,25 @@ public class CreateHexadecimalNumbers {
     public static String createHexNum(long sequenceNumber){
         String hexString = Hex.encodeHexString(longToBytes(sequenceNumber));
         //Removing leading zeros
-        return hexString.substring(8,16);
+        return hexString.substring(0,16);
     }
 
-    public static Long decodeHexNum(String hexString){
-        return Long.decode("0x"+hexString);
+    public static long decodeHexNum(String hexString) throws DecoderException{
+        byte[] bytes = Hex.decodeHex(hexString.toCharArray());
+        return bytesToLong(bytes);
+    }
+
+    public static long bytesToLong(byte[] bytes) {
+        ByteBuffer buffer = ByteBuffer.allocate(Long.BYTES);
+        buffer.put(bytes);
+        buffer.flip();//need flip
+        return buffer.getLong();
     }
 
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws DecoderException{
         //Checking for boundary conditions
-        long LONG_MAX = 2147483647;
+        long LONG_MAX = Long.MAX_VALUE;
         System.out.println("Input Number :: " + LONG_MAX);
         System.out.println("HexString : "+createHexNum(LONG_MAX) + " :: HexNum : " +decodeHexNum(createHexNum(LONG_MAX)));
         //Checking for numbers from 0 to 15
