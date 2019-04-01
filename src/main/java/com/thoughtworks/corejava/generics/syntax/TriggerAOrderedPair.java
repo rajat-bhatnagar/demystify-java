@@ -1,6 +1,6 @@
 package com.thoughtworks.corejava.generics.syntax;
 
-public class triggerAOrderedPair {
+public class TriggerAOrderedPair {
     public static void main(String[] args) {
         Pair<Integer, String> integerStringPair = new OrderedPair<>(1, "Apple");
         Pair<String, String> stringPair = new OrderedPair<>("Apples", "Oranges");
