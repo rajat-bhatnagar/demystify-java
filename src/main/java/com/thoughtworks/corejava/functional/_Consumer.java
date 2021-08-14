@@ -1,5 +1,6 @@
 package com.thoughtworks.corejava.functional;
 
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 public class _Consumer {
@@ -16,10 +17,27 @@ public class _Consumer {
         // Consumer Functional Interface
         consumer.accept(sara);
 
+        // Imperative Approach
+        showCustomerPhoneConditionally(sara, Boolean.TRUE);
+        showCustomerPhoneConditionally(sara, Boolean.FALSE);
+
+        // Declarative Approach using a BiConsumer
+        BiConsumer<Customer, Boolean> showCustomerPhoneConditionallyBiConsumer
+                = (customer, showCustomerPhone) -> System.out.println("Hello " + customer.name
+                + " with Phone Number - " + (showCustomerPhone ? customer.phoneNumber : "**********")
+        );
+        showCustomerPhoneConditionallyBiConsumer.accept(sara, Boolean.TRUE);
+        showCustomerPhoneConditionallyBiConsumer.accept(sara, Boolean.FALSE);
+
     }
 
     static void greetCustomer(Customer customer) {
         System.out.println("Hello " + customer.name + " with phone number - " + customer.phoneNumber);
+    }
+
+    static void showCustomerPhoneConditionally(Customer customer, boolean showCustomerPhone) {
+        System.out.println("Hello " + customer.name + " with phone - "
+                + (showCustomerPhone ? customer.phoneNumber : "************"));
     }
 
     static class Customer {
