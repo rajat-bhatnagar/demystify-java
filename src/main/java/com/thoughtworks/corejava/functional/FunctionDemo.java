@@ -6,7 +6,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class FunctionalDemo {
+public class FunctionDemo {
     public static void main(String[] args) {
 
         List<Person> persons = Arrays.asList(new Person("Paul", Gender.MALE),
