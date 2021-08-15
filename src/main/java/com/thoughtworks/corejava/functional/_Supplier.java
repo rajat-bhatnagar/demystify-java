@@ -12,7 +12,6 @@ public class _Supplier {
         // Declarative Way
         System.out.println(" # Declarative way - Supplier " + getDatabaseUrlSupplier.get());
         System.out.println(" # Declarative way - Supplier List " + getDatabaseUrlSupplierList.get());
-
     }
 
     static Supplier<String> getDatabaseUrlSupplier = () -> "jdbc://localhost:3306/rso_01";
