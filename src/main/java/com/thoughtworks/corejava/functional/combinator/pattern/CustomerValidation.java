@@ -18,7 +18,24 @@ public class CustomerValidation {
         // Is Valid Customer just tells us if the customer is valid or not
         // However it does not tell us that what is wrong with the invalid customer
         // akka if the e mail was incorrect or was it the phone number
-        // Look at CustomerRegistration and how it solves this using combinator pattern
+        // Look at ConsumerRegistrationValidator and how it solves this using combinator pattern
+
+        // Using combinator pattern
+        ConsumerRegistrationValidator.ValidationResult bretResult =
+                ConsumerRegistrationValidator.isValidEmail()
+                .and(ConsumerRegistrationValidator.isValidPhoneNumber())
+                .and(ConsumerRegistrationValidator.isValidDob())
+                .apply(bret);
+
+
+        ConsumerRegistrationValidator.ValidationResult zetResult =
+                ConsumerRegistrationValidator.isValidEmail()
+                .and(ConsumerRegistrationValidator.isValidPhoneNumber())
+                .and(ConsumerRegistrationValidator.isValidDob())
+                .apply(zet);
+
+        System.out.println(bretResult);
+        System.out.println(zetResult);
     }
 
     public static boolean isValidCustomer(Customer customer) {
