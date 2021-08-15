@@ -5,12 +5,20 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class _Function {
     public static void main(String[] args) {
-        List<Person> persons = Arrays.asList(new Person("Paul", Gender.MALE),
+        List<Person> persons = Arrays.asList(
+                new Person("Paul", Gender.MALE),
                 new Person("Laura", Gender.FEMALE),
-                new Person("Mariah", Gender.FEMALE));
+                new Person("Mariah", Gender.FEMALE),
+                new Person("Tyler", Gender.MALE));
+
+        persons.stream()
+                .filter(person -> Gender.FEMALE.equals(person.gender))
+                .collect(Collectors.toSet())
+                .forEach(System.out::println);
         System.out.println("Imperative Way - ");
 
         // Imperative Way
