@@ -15,7 +15,7 @@ public class _Optional {
         System.out.println(value);
 
         Optional.ofNullable("sara@rehab.com")
-                .ifPresent(email -> System.out.println("Sending e mail to - " +email));
+                .ifPresent(email -> System.out.println("Sending e mail to - " + email));
 
 
         Supplier<IllegalArgumentException> exception = () -> new IllegalArgumentException("exception");
@@ -23,5 +23,21 @@ public class _Optional {
                 .orElseThrow(exception);
 
         System.out.println(result);
+
+        Optional<String> emptyOptional = Optional.empty();
+        System.out.println(emptyOptional.isPresent());
+
+        Optional<String> optional = Optional.of("Yep");
+        System.out.println(optional.isPresent());
+
+        Optional<String> hello = Optional.ofNullable(null);
+
+        String orElseGetValue = hello.map(String::toUpperCase)
+                .orElseGet(() -> {
+                    //do some eatra logic of required
+                    return "Something Meaningful";
+                });
+        System.out.println(orElseGetValue);
+
     }
 }
