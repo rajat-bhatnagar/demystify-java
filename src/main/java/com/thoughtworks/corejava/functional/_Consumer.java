@@ -9,27 +9,24 @@ public class _Consumer {
         // Imperative Approach
         Customer sara = new Customer("Sara", "789-897-9987");
         greetCustomer(sara);
-
         // Declarative Approach
-        Consumer<Customer> consumer = customer -> System.out.println("Hello " + customer.name +
-                " with phone number - " + customer.phoneNumber);
-
         // Consumer Functional Interface
         consumer.accept(sara);
-
         // Imperative Approach
         showCustomerPhoneConditionally(sara, Boolean.TRUE);
         showCustomerPhoneConditionally(sara, Boolean.FALSE);
-
         // Declarative Approach using a BiConsumer
-        BiConsumer<Customer, Boolean> showCustomerPhoneConditionallyBiConsumer
-                = (customer, showCustomerPhone) -> System.out.println("Hello " + customer.name
-                + " with Phone Number - " + (showCustomerPhone ? customer.phoneNumber : "**********")
-        );
         showCustomerPhoneConditionallyBiConsumer.accept(sara, Boolean.TRUE);
         showCustomerPhoneConditionallyBiConsumer.accept(sara, Boolean.FALSE);
-
     }
+
+    static Consumer<Customer> consumer = customer -> System.out.println("Hello " + customer.name +
+            " with phone number - " + customer.phoneNumber);
+
+    static BiConsumer<Customer, Boolean> showCustomerPhoneConditionallyBiConsumer
+            = (customer, showCustomerPhone) -> System.out.println("Hello " + customer.name
+            + " with Phone Number - " + (showCustomerPhone ? customer.phoneNumber : "**********")
+    );
 
     static void greetCustomer(Customer customer) {
         System.out.println("Hello " + customer.name + " with phone number - " + customer.phoneNumber);

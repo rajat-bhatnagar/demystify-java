@@ -8,11 +8,9 @@ import java.util.function.Predicate;
 
 public class _Function {
     public static void main(String[] args) {
-
         List<Person> persons = Arrays.asList(new Person("Paul", Gender.MALE),
                 new Person("Laura", Gender.FEMALE),
                 new Person("Mariah", Gender.FEMALE));
-
         System.out.println("Imperative Way - ");
 
         // Imperative Way
@@ -24,43 +22,35 @@ public class _Function {
 
         //Declarative way
         System.out.println("Functional Way - ");
-
-        Predicate<Person> personPredicate = person -> Gender.FEMALE.equals(person.gender);
         persons.stream()
                 .filter(personPredicate)
                 .forEach(System.out::println);
 
         // Imperative way
         System.out.println("Imperative - incrementBy1 : " + incrementBy1(19));
-
         // Declarative Way
-        Function<Integer, Integer> incrementBy1Function = number -> number + 1;
         System.out.println("Declarative # incrementBy1Function : " + incrementBy1Function.apply(19));
-
-
         int input = incrementBy1(19);
-
         //Imperative way
         System.out.println("Imperative - incrementBy1 * multiplyBy10 : " + multiplyBy10(input));
-
         //Declarative Way
-
-        //Function takes 1 argument and produces 1 result
-        Function<Integer, Integer> multiplyBy10Function = number -> number * 10;
-
-        Function<Integer, Integer> incrementBy1AndMultiplyBy10Function
-                = incrementBy1Function.andThen(multiplyBy10Function);
-
         System.out.println("Declarative Chaining incrementBy1AndMultiplyBy10Function - "
                 + incrementBy1AndMultiplyBy10Function.apply(19));
-
-        // Bi Function takes 2 Arguments and produces 1 Result
-        BiFunction<Integer, Integer, Integer> incrementBy1MultiplyByBiFunction
-                = (numberToIncrementBy1, numberToMuliplyBy) -> (numberToIncrementBy1 + 1) * numberToMuliplyBy;
-
         System.out.println("Bi Function - incrementBy1MultiplyByBiFunction : " + incrementBy1MultiplyByBiFunction.apply(19, 10));
-
     }
+
+    static Predicate<Person> personPredicate = person -> Gender.FEMALE.equals(person.gender);
+
+    static Function<Integer, Integer> incrementBy1Function = number -> number + 1;
+
+    //Function takes 1 argument and produces 1 result
+    static Function<Integer, Integer> multiplyBy10Function = number -> number * 10;
+
+    static Function<Integer, Integer> incrementBy1AndMultiplyBy10Function = incrementBy1Function.andThen(multiplyBy10Function);
+
+    // Bi Function takes 2 Arguments and produces 1 Result
+    static BiFunction<Integer, Integer, Integer> incrementBy1MultiplyByBiFunction
+            = (numberToIncrementBy1, numberToMuliplyBy) -> (numberToIncrementBy1 + 1) * numberToMuliplyBy;
 
     static int incrementBy1(int number) {
         return number + 1;
