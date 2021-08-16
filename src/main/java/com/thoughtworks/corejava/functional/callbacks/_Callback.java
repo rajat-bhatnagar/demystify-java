@@ -34,9 +34,7 @@ public class _Callback {
         }
     }
 
-
 }
-
 
 /* Java scripts callbacks
 
