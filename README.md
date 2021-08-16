@@ -2,7 +2,7 @@
 <u><b>Java programs for illustrating core java way of doing things</b></u><br>
 <i>
 (a) Root package contains sub-packages with sample programs<br>
-(b) These sub-packages are<br>
+These sub-packages are<br>
 	(1) annotation<br>
 	(2) collections<br>
 	(3) enums<br>
@@ -13,4 +13,6 @@
 	(8) patterns<br>
 	(9) serialization<br>
 	(10) temp<br>
+	(11) functional - callbacks
+	                - combinator pattern    
 </i>
