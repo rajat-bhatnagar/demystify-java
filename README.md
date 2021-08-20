@@ -1,5 +1,6 @@
 # demystify-JavaSE
-<u><b>Java programs for illustrating core java way of doing things</b></u><br>
+<u><b>Java | Grrovy and Kotlin programs for a Healthy Mind !! </b></u><br>
+
 <i>
 (a) Root package contains sub-packages with sample programs<br>
 These sub-packages are<br>
