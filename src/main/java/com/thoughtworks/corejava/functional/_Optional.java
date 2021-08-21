@@ -1,5 +1,6 @@
 package com.thoughtworks.corejava.functional;
 
+
 import java.util.Optional;
 import java.util.function.Supplier;
 
@@ -34,10 +35,16 @@ public class _Optional {
 
         String orElseGetValue = hello.map(String::toUpperCase)
                 .orElseGet(() -> {
-                    //do some eatra logic of required
+                    //do some extra logic of required
                     return "Something Meaningful";
                 });
         System.out.println(orElseGetValue);
 
+        Country country = new Country("India", "Hindi");
+        // proving that lombok dependency behavior is as expected
+        //TODO lombok not generating the toString
+        System.out.println(country);
+
     }
+
 }
