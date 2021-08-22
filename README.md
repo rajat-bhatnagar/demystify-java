@@ -1,5 +1,5 @@
 # demystify-JavaSE
-<u><b> Java 16 | Groovy 3.0.8 and Kotlin  !! </b></u><br>
+<u><b> Java 16 | Groovy and Kotlin  !! </b></u><br>
 
 <i>
 (a) Root package contains sub-packages with sample programs<br>
