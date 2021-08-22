@@ -1,11 +1,10 @@
-package com.thoughtworks.corejava.jodaTimeLibrary;
+package com.thoughtworks.corejava.jodatime;
 
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 /**

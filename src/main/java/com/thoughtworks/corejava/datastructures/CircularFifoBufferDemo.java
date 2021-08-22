@@ -1,4 +1,4 @@
-package com.thoughtworks.corejava.dataStructures;
+package com.thoughtworks.corejava.datastructures;
 
 import org.apache.commons.collections.buffer.CircularFifoBuffer;
 /**

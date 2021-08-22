@@ -1,6 +1,4 @@
-package com.thoughtworks.corejava.dataStructures;
-
-import java.util.Arrays;
+package com.thoughtworks.corejava.datastructures;
 
 /**
  * Created by rajatbhatnagar on 12/28/15.

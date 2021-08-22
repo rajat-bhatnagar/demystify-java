@@ -1,4 +1,4 @@
-package com.thoughtworks.corejava.flowControl;
+package com.thoughtworks.corejava.flowcontrol;
 
 /**
  * Created by rajatbhatnagar on 8/11/15.

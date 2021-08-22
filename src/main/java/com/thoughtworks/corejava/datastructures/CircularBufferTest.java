@@ -1,4 +1,4 @@
-package com.thoughtworks.corejava.dataStructures;
+package com.thoughtworks.corejava.datastructures;
 
 /**
  * Created by rajatbhatnagar on 12/28/15.
